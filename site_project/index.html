@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+    <meta charset="utf-8" />
+	<meta http-equiv="cache-control" content="max-age=0" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta http-equiv="expires" content="0" />
+	<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+	<meta http-equiv="pragma" content="no-cache" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<!--<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>-->
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="includes/CSS/main.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <title>Home</title>
+	<style>
+	 details.inline{
+		display: inline-block;
+	 }
+	 nav.nav{
+		display: flex;
+	 }
+	</style>
+</head>
+	<body>
+		<header>
+			<nav class="Nav"> 
+				<a class="mylink big" href="body.html">Home</a> ||&nbsp;
+				<details class="inline" name="Itens Blocked" title="Blocked Itens">
+					<summary>Other Stuff:</summary>
+					<ul class="Boxed">
+						<li onclick="$('#Frame').slideUp().html('Heloo!!!!').slideDown();">HOME</li>
+					</ul>
+				</details>
+			</nav>
+		</header>
+		<hr>
+		<div class="bodyDisplay" style="display:none; border: none;" id="Frame" name="Frame"><noscript>Not Support For Javascript Detected</noscript></div>
+		<div class="accordion">
+		<h3>Video Do Miau</h3>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/FiMpxpDd6Hk?si=BNot9A0keuqiceVu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+		<hr>
+			<div class="accordion">
+			<h3>Contato</h3>
+			<form name="contato" action="contato.html" method="post" class="FormContact" id="FormContact">
+				<h3>Contato - Formulário</h3>
+				<span class="Formlabel"><label for="name">Seu Nome:</label>
+				<input id="name" name="name" class="FormImput"></span>
+				<br>
+				<span class="Formlabel"><label for="email">Email:</label>
+				<input id="email" name="email" type="email" class="FormImput" required></span><br><hr>
+				Mensagem:<br>
+				<textarea maxlength="250" name="UserMsg" class="FormContact txtMSG"></textarea>
+				<br><small>250 caracteres no Máximo</small><br>
+				
+				<input id="btnSubmit" value="Enviar Mensagem de Contato" type="submit">
+			</form>
+		</div>
+		<script type="text/javascript" src="main.js" preload="true"></script>
+		<footer>
+		<a class="mylink" onclick="$('#Frame').slideUp().html('Heloo!!!!').slideDown();" <!--href="body.html"-->>Home</a> || 
+		</footer>
+</body>
+</html>
