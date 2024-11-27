@@ -28,7 +28,9 @@ var lastVisited = "body.html";
 					}catch(e){console.error(e.code+": "+e+"\nIndex: "+i)}
 					e.target.style.color = "purple";
 					$("#Frame").slideUp("slow");
-					$("#Frame").load(e.target.href).slideDown("slow");
+					$("#Frame").load(e.target.href, (r,s,x)=>{
+						$("#Frame").slideDown("slow");
+					});
 					lastVisited = e.target.href;
 					//return
 				});
