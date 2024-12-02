@@ -27,11 +27,11 @@ var lastVisited = "body.html";
 						}*/
 					}catch(e){console.error(e.code+": "+e+"\nIndex: "+i)}
 					e.target.style.color = "purple";
-					$("#Frame").slideUp("slow").hide();
-					$("#Frame").load(e.target.href, (r,s,x)=>{
+					$("#Frame").slideUp("slow").hide().load(e.target.href, (r,s,x)=>{
 						$("#Frame").show().slideDown("slow");
 					});
 					lastVisited = e.target.href;
+					console.log("Last Visited Page is: "+lastVisited);
 					//return
 				});
 			});
