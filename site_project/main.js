@@ -27,8 +27,10 @@ var lastVisited = "body.html";
 						}*/
 					}catch(e){console.error(e.code+": "+e+"\nIndex: "+i)}
 					e.target.style.color = "purple";
-					$("#Frame").slideUp("slow").load(e.target.href, (r,s,x)=>{
-						$("#Frame").slideDown("slow");
+					$("#Frame").slideUp("slow",()={
+						$("#Frame").load(e.target.href, (r,s,x)=>{
+							$("#Frame").slideDown("slow");
+						});
 					});
 					lastVisited = e.target.href;
 					console.log("Last Visited Page is: "+lastVisited);
